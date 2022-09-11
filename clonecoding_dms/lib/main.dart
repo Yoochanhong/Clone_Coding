@@ -15,7 +15,51 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MealsPage(),
+      home: MainWidget(),
+    );
+  }
+}
+
+class MainWidget extends StatefulWidget {
+  const MainWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MainWidget> createState() => _MainWidgetState();
+}
+
+class _MainWidgetState extends State<MainWidget> {
+  int _index = 0;
+  List<BottomNavigationBarItem> bottomItems = [
+    BottomNavigationBarItem(icon: Icon(Icons.no_meals), label: '급식'),
+    BottomNavigationBarItem(icon: Icon(Icons.check), label: '신청'),
+    BottomNavigationBarItem(icon: Icon(Icons.announcement), label: '공지'),
+    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: '마이페이지'),
+  ];
+  List pages = [
+    MealsPage(),
+    SignUp(),
+    Announcement(),
+    MyPage(),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: pages[_index],
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.teal[400],
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white30,
+        selectedFontSize: 14,
+        unselectedFontSize: 0,
+        currentIndex: _index,
+        onTap: (int index){
+          setState(() {
+            _index = index;
+          });
+        },
+        items:bottomItems,
+      ),
     );
   }
 }

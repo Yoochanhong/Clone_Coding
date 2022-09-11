@@ -6,7 +6,14 @@ class Announcement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("공지"),
+      child: Center(
+        child: Column(
+          children: [
+            Text('공지화면'),
+          ],
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
+      ),
     );
   }
 }

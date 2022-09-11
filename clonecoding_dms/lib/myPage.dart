@@ -6,7 +6,14 @@ class MyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("마이페이지"),
+      child: Center(
+        child: Column(
+          children: [
+            Text('마이페이지'),
+          ],
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
+      ),
     );
   }
 }

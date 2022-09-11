@@ -10,7 +10,15 @@ class MealsPage extends StatefulWidget {
 class _MealsPageState extends State<MealsPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
+      child: Center(
+        child: Column(
+          children: [
+            Text('급식화면'),
+          ],
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
+      ),
     );
   }
 }

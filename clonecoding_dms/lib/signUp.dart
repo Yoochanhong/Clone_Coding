@@ -7,7 +7,14 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("체크")
+      child: Center(
+        child: Column(
+          children: [
+            Text('신청화면'),
+          ],
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
+      ),
     );
   }
 }
