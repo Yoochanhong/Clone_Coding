@@ -18,19 +18,27 @@ class SignUp extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Column(
-                      children: [
-                        Text(
-                          '신청\n',
-                          style: TextStyle(
-                              color: Colors.teal[400],
-                              fontSize: 30.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text('연장, 잔류, 외출, 기상 음악을 신청 할 수 있습니다.'),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '신청\n',
+                            style: TextStyle(
+                                color: Colors.teal[400],
+                                fontSize: 30.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            '연장, 잔류, 외출, 기상 음악을 신청 할 수 있습니다.',
+                            style: TextStyle(
+                              fontSize: 15.0,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-
                   ],
                 ),
                 signupButton('연장 신청', '학과시간 이후에 추가적으로 연장학습을 할 수 있습니다.'),
