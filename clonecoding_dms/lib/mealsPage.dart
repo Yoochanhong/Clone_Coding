@@ -1,3 +1,4 @@
+import 'package:clonecoding_dms/signup/button.dart';
 import 'package:flutter/material.dart';
 
 class MealsPage extends StatefulWidget {
@@ -50,62 +51,9 @@ class _MealsPageState extends State<MealsPage>
                   padding: EdgeInsets.fromLTRB(15.0, 70.0, 15.0, 0.0),
                   child: Column(
                     children: [
-                      Card(
-                        shape: RoundedRectangleBorder(
-                            //모서리 둥글게 깎기
-                            borderRadius: BorderRadius.circular(16.0)),
-                        elevation: 3.0, //그림자 깊이
-                        child: ListTile(
-                          title: Text(
-                            '아침',
-                            style: TextStyle(
-                                color: Colors.teal[400], fontSize: 20.0),
-                          ),
-                          subtitle: Padding(
-                            padding: EdgeInsets.fromLTRB(5.0, 30.0, 30.0, 30.0),
-                            child:
-                                Text('급식이 없습니다.'), //나중에 급식 api 따와서 변수로 넣어줄 예정
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 15.0),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                            //모서리 둥글게 깎기
-                            borderRadius: BorderRadius.circular(16.0)),
-                        elevation: 3.0, //그림자 깊이
-                        child: ListTile(
-                          title: Text(
-                            '점심',
-                            style: TextStyle(
-                                color: Colors.teal[400], fontSize: 20.0),
-                          ),
-                          subtitle: Padding(
-                            padding: EdgeInsets.fromLTRB(5.0, 30.0, 30.0, 30.0),
-                            child:
-                                Text('급식이 없습니다.'), //나중에 급식 api 따와서 변수로 넣어줄 예정
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 15.0),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                            //모서리 둥글게 깎기
-                            borderRadius: BorderRadius.circular(16.0)),
-                        elevation: 3.0, //그림자 깊이
-                        child: ListTile(
-                          title: Text(
-                            '저녁',
-                            style: TextStyle(
-                                color: Colors.teal[400], fontSize: 20.0),
-                          ),
-                          subtitle: Padding(
-                            padding: EdgeInsets.fromLTRB(5.0, 30.0, 30.0, 30.0),
-                            child:
-                                Text('급식이 없습니다.'), //나중에 급식 api 따와서 변수로 넣어줄 예정
-                          ),
-                        ),
-                      ),
+                      mealsButton('아침', '급식이 없습니다.'),
+                      mealsButton('점심', '급식이 없습니다.'),
+                      mealsButton('저녁', '급식이 없습니다.'),
                     ],
                   ),
                 ),
