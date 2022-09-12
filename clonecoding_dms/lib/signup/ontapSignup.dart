@@ -48,7 +48,6 @@ class _OnTapSignUpState extends State<OnTapSignUp> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(signUpClass.realTitle),
       ),
       body: Container(
         child: Center(
