@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../signUpClass.dart';
+import 'signUpClass.dart';
 import 'signUp.dart';
 
 class OnTapSignUp extends StatefulWidget {
@@ -17,6 +17,8 @@ class OnTapSignUp extends StatefulWidget {
       this.fourthTitle,
       this.fourthSubText})
       : super(key: key);
+
+
 
   String realTitle;
   String title;
@@ -36,13 +38,17 @@ class OnTapSignUp extends StatefulWidget {
 
 class _OnTapSignUpState extends State<OnTapSignUp> {
 
+
   void initState(){
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       appBar: AppBar(
+        title: Text(signUpClass.realTitle),
       ),
       body: Container(
         child: Center(

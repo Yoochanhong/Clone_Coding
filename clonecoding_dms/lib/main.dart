@@ -1,7 +1,7 @@
 import 'package:clonecoding_dms/announcement.dart';
 import 'package:clonecoding_dms/mealsPage.dart';
 import 'package:clonecoding_dms/myPage.dart';
-import 'package:clonecoding_dms/signUp.dart';
+import 'package:clonecoding_dms/signup/signUp.dart';
 import 'package:flutter/material.dart';
 
 void main() {
