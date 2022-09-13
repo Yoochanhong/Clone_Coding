@@ -3,6 +3,7 @@ import 'package:clonecoding_dms/mealsPage.dart';
 import 'package:clonecoding_dms/myPage.dart';
 import 'package:clonecoding_dms/signup/signUp.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,10 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MainWidget(),
-    );
+    return ScreenUtilInit(
+        designSize: Size(1080, 1920),
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: MainWidget(),
+          );
+        });
   }
 }
 
@@ -41,6 +46,7 @@ class _MainWidgetState extends State<MainWidget> {
     Announcement(),
     MyPage(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,12 +59,12 @@ class _MainWidgetState extends State<MainWidget> {
         selectedFontSize: 14,
         unselectedFontSize: 0,
         currentIndex: _index,
-        onTap: (int index){
+        onTap: (int index) {
           setState(() {
             _index = index;
           });
         },
-        items:bottomItems,
+        items: bottomItems,
       ),
     );
   }
