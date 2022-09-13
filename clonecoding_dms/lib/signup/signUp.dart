@@ -61,7 +61,8 @@ class SignUp extends StatelessWidget {
                             '토요귀사',
                             '토요귀사를 신청하신 경우 어쩌고 저쩌고',
                             '잔류',
-                            '잔류를 신청하신 경우 어쩌고 저쩌고');
+                            '잔류를 신청하신 경우 어쩌고 저쩌고',
+                            '확인');
                         Navigator.push(
                           context,
                           MaterialPageRoute(

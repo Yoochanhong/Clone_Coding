@@ -93,7 +93,7 @@ Widget onTapSignButton(String title, String subText){
         ),
         child: SizedBox(
           width: 750.w,
-          height: 950.w,
+          height: 1000.h,
           child: Card(
             shape: RoundedRectangleBorder(
               //모서리 둥글게 깎기

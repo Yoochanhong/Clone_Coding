@@ -14,7 +14,6 @@ class OnTapSignUp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(signUpClass.realTitle),
-
         leading: Icon(Icons.keyboard_backspace),
       ),
       body: Container(
@@ -40,7 +39,7 @@ class OnTapSignUp extends StatelessWidget {
             ),
             SizedBox(
               width: 1080.0.w,
-              height: 1000.0.h,
+              height: 1050.0.h,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -53,6 +52,26 @@ class OnTapSignUp extends StatelessWidget {
                   onTapSignButton(
                       signUpClass.fourthTitle, signUpClass.fourthSubTitle),
                 ],
+              ),
+            ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: SizedBox(
+                  width: 950.w,
+                  height: 120.h,
+                  child: MaterialButton(
+                    child: Text(
+                      '확인',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onPressed: () {},
+                    shape: RoundedRectangleBorder(
+                        //모서리 둥글게 깎기
+                        borderRadius: BorderRadius.circular(10.0)),
+                    color: Colors.teal[400],
+                  ),
+                ),
               ),
             ),
           ],
