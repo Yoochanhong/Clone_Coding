@@ -66,9 +66,9 @@ class SignUp extends StatelessWidget {
                           '토요귀가를 신청하신 경우 토요일 오후 9시 이전에 귀가하여 일요일 오전 8시 30분 이후 기숙사로 귀사 가능합니다. 토요귀가를 신청하시겠습니까?',
                           '토요귀사',
                           '토요귀사를 신청하신 경우 어쩌고 저쩌고',
+                          '확인',
                           '잔류',
-                          '잔류를 신청하신 경우 어쩌고 저쩌고',
-                          '확인');
+                          '잔류를 신청하신 경우 어쩌고 저쩌고');
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -88,7 +88,45 @@ class SignUp extends StatelessWidget {
                   ),
                 ),
               ]),
-              signupButton('주말급식 신청', '주말급식을 신청할 수 있습니다.'),
+              Stack(children: [
+                signupButton('주말급식 신청', '주말급식을 신청할 수 있습니다.'),
+                SizedBox(
+                  width: 900.0.w,
+                  height: 350.0.h,
+                  child: TextButton(
+                    onPressed: () {
+                      final weekend = SignUpClass(
+                          '주말급식 신청',
+                          '주말급식을 신청해주세요',
+                          '주말에 배식을 받을것인지에 대한 여부를 결정합니다.\n주말급식 신청여부는 담임선생님께서 확인하신 후\n영양사선생님께 전달되니 신중히 결정해주세요.',
+                          '신청대기중',
+                          '아직 주말급식 신청을 하지 않은 상태입니다. 주말급식신청 기간내에 신청, 미신청 둘중 하나를 선택해주세요.',
+                          '신청',
+                          '주말급식을 신청합니다. 토요일은 2끼(아침, 점심)이 제공되고, 일요일은 3끼(아침, 점심, 저녁)가 제공됩니다.',
+                          '미신청',
+                          '주말급식을 신청하지 않습니다.',
+                          '확인',
+                          'ㅇ',
+                          'ㅇ',);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => OnTapSignUp(
+                            signUpClass: weekend,
+                          ),
+                        ),
+                      );
+                    },
+                    child:
+                        Padding(padding: EdgeInsets.only(left: 8.0, top: 10.0)),
+                    style: ButtonStyle(
+                      overlayColor: MaterialStateColor.resolveWith(
+                        (states) => Colors.transparent,
+                      ), //버튼 애니메이션 삭제
+                    ),
+                  ),
+                ),
+              ]),
               signupButton('외출 신청', '외출신청서를 작성하여 외출할 수 있습니다.'),
             ],
           ),

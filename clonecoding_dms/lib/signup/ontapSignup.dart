@@ -38,7 +38,7 @@ class OnTapSignUp extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(60.0.w, 5.0.w, 10.0.w, 100.0.w),
+              padding: EdgeInsets.fromLTRB(20.0, 5.0, 10.0, 30.0),
               child: Text(
                 signUpClass.subText,
                 style: TextStyle(
@@ -52,6 +52,7 @@ class OnTapSignUp extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
+                  Padding(padding: EdgeInsets.only(left: 120.0.w)),
                   onTapSignButton(
                       signUpClass.firstTitle, signUpClass.firstSubText),
                   onTapSignButton(
@@ -60,6 +61,7 @@ class OnTapSignUp extends StatelessWidget {
                       signUpClass.thirdTitle, signUpClass.thirdSubText),
                   onTapSignButton(
                       signUpClass.fourthTitle, signUpClass.fourthSubTitle),
+                  Padding(padding: EdgeInsets.only(right: 120.0.w)),
                 ],
               ),
             ),

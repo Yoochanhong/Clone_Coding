@@ -50,7 +50,7 @@ class _MealsPageState extends State<MealsPage>
               ),
               Container(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(15.0.w, 40.0.w, 15.0.w, 0.0),
+                  padding: EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 0.0),
                   child: Column(
                     children: [
                       mealsButton('아침', '급식이 없습니다.'),

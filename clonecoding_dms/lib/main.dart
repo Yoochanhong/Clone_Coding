@@ -35,10 +35,10 @@ class MainWidget extends StatefulWidget {
 class _MainWidgetState extends State<MainWidget> {
   int _index = 0;
   List<BottomNavigationBarItem> bottomItems = [
-    BottomNavigationBarItem(icon: Icon(Icons.no_meals), label: '급식'),
+    BottomNavigationBarItem(icon: Icon(Icons.restaurant), label: '급식'),
     BottomNavigationBarItem(icon: Icon(Icons.check), label: '신청'),
-    BottomNavigationBarItem(icon: Icon(Icons.announcement), label: '공지'),
-    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: '마이페이지'),
+    BottomNavigationBarItem(icon: Icon(Icons.notifications_rounded), label: '공지'),
+    BottomNavigationBarItem(icon: Icon(Icons.person), label: '마이페이지'),
   ];
   List pages = [
     MealsPage(),
