@@ -20,12 +20,12 @@ class SignUp extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 15.0),
+                    padding: EdgeInsets.only(left: 50.0.w),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.all(13.0),
+                          padding: EdgeInsets.only(left: 50.0.w, top: 50.0.h, bottom: 20.0.h),
                           child: Text(
                             '신청',
                             style: TextStyle(
@@ -35,7 +35,7 @@ class SignUp extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 15.0),
+                          padding: EdgeInsets.only(left: 50.0.w),
                           child: Text(
                             '연장, 잔류, 외출, 기상 음악을 신청 할 수 있습니다.',
                             style: TextStyle(
@@ -67,6 +67,7 @@ class SignUp extends StatelessWidget {
                           '토요귀사',
                           '토요귀사를 신청하신 경우 어쩌고 저쩌고',
                           '확인',
+                          4,
                           '잔류',
                           '잔류를 신청하신 경우 어쩌고 저쩌고');
                       Navigator.push(
@@ -79,7 +80,7 @@ class SignUp extends StatelessWidget {
                       );
                     },
                     child:
-                        Padding(padding: EdgeInsets.only(left: 8.0, top: 10.0)),
+                        Padding(padding: EdgeInsets.only(left: 8.0.w, top: 10.0.h)),
                     style: ButtonStyle(
                       overlayColor: MaterialStateColor.resolveWith(
                         (states) => Colors.transparent,
@@ -106,6 +107,7 @@ class SignUp extends StatelessWidget {
                           '미신청',
                           '주말급식을 신청하지 않습니다.',
                           '확인',
+                          3,
                           'ㅇ',
                           'ㅇ',);
                       Navigator.push(
@@ -118,7 +120,7 @@ class SignUp extends StatelessWidget {
                       );
                     },
                     child:
-                        Padding(padding: EdgeInsets.only(left: 8.0, top: 10.0)),
+                        Padding(padding: EdgeInsets.only(left: 8.0.w, top: 10.0.h)),
                     style: ButtonStyle(
                       overlayColor: MaterialStateColor.resolveWith(
                         (states) => Colors.transparent,

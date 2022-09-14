@@ -7,7 +7,7 @@ import 'signUp.dart';
 Widget signupButton(String ButtonTitle, String ButtonSubTitle) {
   return SizedBox(
     width: 1000.0.w,
-    height: 360.0.h,
+    height: 350.0.h,
     child: TextButton(
       style: ButtonStyle(
         overlayColor: MaterialStateColor.resolveWith(
