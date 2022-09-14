@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'signUp.dart';
@@ -13,20 +14,26 @@ class OnTapSignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.teal[400],
         title: Text(signUpClass.realTitle),
-        leading: Icon(Icons.keyboard_backspace),
+        leading: IconButton(
+          icon: Icon(Icons.keyboard_backspace),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
       ),
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.all(60.0.w),
+              padding: EdgeInsets.all(20.0),
               child: Text(
                 signUpClass.title,
                 style: TextStyle(
                     color: Colors.teal[400],
-                    fontSize: 25.0,
+                    fontSize: 70.0.sp,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -34,7 +41,9 @@ class OnTapSignUp extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(60.0.w, 5.0.w, 10.0.w, 100.0.w),
               child: Text(
                 signUpClass.subText,
-                style: TextStyle(),
+                style: TextStyle(
+                  fontSize: 40.0.sp,
+                ),
               ),
             ),
             SizedBox(
@@ -62,8 +71,8 @@ class OnTapSignUp extends StatelessWidget {
                   height: 120.h,
                   child: MaterialButton(
                     child: Text(
-                      '확인',
-                      style: TextStyle(color: Colors.white),
+                      signUpClass.checkButton,
+                      style: TextStyle(color: Colors.white, fontSize: 40.0.sp),
                     ),
                     onPressed: () {},
                     shape: RoundedRectangleBorder(
