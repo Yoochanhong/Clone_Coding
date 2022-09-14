@@ -23,7 +23,7 @@ Widget signupButton(String ButtonTitle, String ButtonSubTitle) {
         child: Center(
           child: ListTile(
             title: Padding(
-              padding: const EdgeInsets.only(left: 10.0, top: 25.0),
+              padding: EdgeInsets.only(left: 10.0.w, top: 25.0.h),
               child: Text(
                 '$ButtonTitle',
                 style: TextStyle(
@@ -33,7 +33,7 @@ Widget signupButton(String ButtonTitle, String ButtonSubTitle) {
               ),
             ),
             subtitle: Padding(
-              padding: const EdgeInsets.fromLTRB(10.0, 3.0, 0.0, 40.0),
+              padding: EdgeInsets.fromLTRB(10.0.w, 3.0.h, 0.0.w, 40.0.h),
               child: Text(
                 '$ButtonSubTitle',
                 style: TextStyle(fontSize: 35.0.sp),
@@ -56,8 +56,8 @@ Widget mealsButton(String title, String subTitle) {
               (states) => Colors.transparent), //버튼 애니메이션 삭제
         ),
         child: SizedBox(
-          height: 430.w,
-          width: 1000.h,
+          width: 1000.0.w,
+          height: 400.0.h,
           child: Card(
             shape: RoundedRectangleBorder(
                 //모서리 둥글게 깎기
@@ -67,18 +67,20 @@ Widget mealsButton(String title, String subTitle) {
             child: Center(
               child: ListTile(
                 title: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: EdgeInsets.all(15.0.r),
                   child: Text(
                     '$title',
                     style: TextStyle(
                         color: Colors.teal[400],
-                        fontSize: 20.0,
+                        fontSize: 65.0.sp,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
                 subtitle: Padding(
-                  padding: const EdgeInsets.fromLTRB(10.0, 3.0, 0.0, 40.0),
-                  child: Text('$subTitle'),
+                  padding: EdgeInsets.fromLTRB(10.0.w, 3.0.h, 0.0.w, 40.0.h),
+                  child: Text('$subTitle',style: TextStyle(
+                    fontSize: 40.0.sp,
+                  ),),
                 ),
               ),
             ),

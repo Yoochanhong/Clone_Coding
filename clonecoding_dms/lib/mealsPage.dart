@@ -48,15 +48,20 @@ class _MealsPageState extends State<MealsPage>
                   ),
                 ],
               ),
-              Container(
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(15.0, 40.0, 15.0, 0.0),
-                  child: Column(
-                    children: [
-                      mealsButton('아침', '급식이 없습니다.'),
-                      mealsButton('점심', '급식이 없습니다.'),
-                      mealsButton('저녁', '급식이 없습니다.'),
-                    ],
+              Padding(
+                padding: EdgeInsets.fromLTRB(15.0.w, 40.0.h, 15.0.w, 0.0.h),
+                child: SizedBox(
+                  width: 1000.0.w,
+                  height: 1400.0.h,
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        mealsButton('아침', '급식이 없습니다.'),
+                        mealsButton('점심', '급식이 없습니다.'),
+                        mealsButton('저녁', '급식이 없습니다.'),
+                      ],
+                    ),
                   ),
                 ),
               ),
