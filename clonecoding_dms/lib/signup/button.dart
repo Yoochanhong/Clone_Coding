@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'ontapSignup.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'signUp.dart';
+import 'signUpClass.dart';
 
 Widget signupButton(String ButtonTitle, String ButtonSubTitle) {
   return SizedBox(
@@ -13,7 +14,8 @@ Widget signupButton(String ButtonTitle, String ButtonSubTitle) {
         overlayColor: MaterialStateColor.resolveWith(
             (states) => Colors.transparent), //버튼 애니메이션 삭제
       ),
-      onPressed: () {},
+      onPressed: () {
+      },
       child: Card(
         shape: RoundedRectangleBorder(
             //모서리 둥글게 깎기
@@ -95,10 +97,11 @@ Widget onTapSignButton(String title, String subText) {
   return Column(
     children: [
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+        },
         style: ButtonStyle(
           overlayColor: MaterialStateColor.resolveWith(
-              (states) => Colors.transparent), //버튼 애니메이션 삭제
+              (states) => Colors.transparent,), //버튼 애니메이션 삭제
         ),
         child: SizedBox(
           width: 750.w,
@@ -134,5 +137,49 @@ Widget onTapSignButton(String title, String subText) {
         ),
       ),
     ],
+  );
+}
+
+Widget announcementButton(int w, int h){
+  return TextButton(
+    onPressed: () {},
+    style: ButtonStyle(
+      overlayColor: MaterialStateColor.resolveWith(
+            (states) => Colors.transparent,
+      ), //버튼 애니메이션 삭제
+    ),
+    child: SizedBox(
+      width: w.w,
+      height: h.h,
+      child: Card(
+        shape: RoundedRectangleBorder(
+          //모서리 둥글게 깎기
+            borderRadius: BorderRadius.circular(20.0)),
+        elevation: 3.0, //그림자 깊이
+        shadowColor: Colors.teal[300],
+        child: Center(
+          child: ListTile(
+            title: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                '공지사항',
+                style: TextStyle(
+                    color: Colors.teal[400],
+                    fontSize: 50.0.sp,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            subtitle: Padding(
+              padding: const EdgeInsets.fromLTRB(
+                  10.0, 3.0, 0.0, 40.0),
+              child: Text(
+                '사감부에서 게시한 공지사항을 열람합니다.',
+                style: TextStyle(fontSize: 40.0.sp),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
   );
 }
