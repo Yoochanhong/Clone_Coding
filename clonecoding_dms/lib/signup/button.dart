@@ -140,7 +140,7 @@ Widget onTapSignButton(String title, String subText) {
   );
 }
 
-Widget announcementButton(int w, int h){
+Widget announcementButton(int w, int h, String title, String subText){
   return TextButton(
     onPressed: () {},
     style: ButtonStyle(
@@ -160,9 +160,9 @@ Widget announcementButton(int w, int h){
         child: Center(
           child: ListTile(
             title: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(25.0.r),
               child: Text(
-                '공지사항',
+                '$title',
                 style: TextStyle(
                     color: Colors.teal[400],
                     fontSize: 50.0.sp,
@@ -170,10 +170,10 @@ Widget announcementButton(int w, int h){
               ),
             ),
             subtitle: Padding(
-              padding: const EdgeInsets.fromLTRB(
-                  10.0, 3.0, 0.0, 40.0),
+              padding: EdgeInsets.fromLTRB(
+                  20.0.w, 2.0.h, 0.0.w, 40.0.h),
               child: Text(
-                '사감부에서 게시한 공지사항을 열람합니다.',
+                '$subText',
                 style: TextStyle(fontSize: 40.0.sp),
               ),
             ),

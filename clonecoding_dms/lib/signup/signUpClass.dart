@@ -9,7 +9,7 @@ class SignUpClass {
   String thirdTitle;
   String thirdSubText;
   String checkButton;
-  String buttonPageindex;
+  int buttonPageIndex;
   String fourthTitle;
   String fourthSubTitle;
 
@@ -24,7 +24,7 @@ class SignUpClass {
     this.thirdTitle,
     this.thirdSubText,
     this.checkButton,
-    this.buttonPageindex,
+    this.buttonPageIndex,
     this.fourthTitle,
     this.fourthSubTitle,
   );

@@ -13,6 +13,7 @@ class _MealsPageState extends State<MealsPage>
     with SingleTickerProviderStateMixin {
   //상태가 잆는 위젯은 상태값들을 보존하고 추적할 수 있다.
   TabController? _tabController;
+
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
@@ -37,8 +38,7 @@ class _MealsPageState extends State<MealsPage>
                   ),
                   Text(
                     '2022년 9월 12일\n         월요일',
-                    style: TextStyle(color: Colors.black,
-                    fontSize: 35.w),
+                    style: TextStyle(color: Colors.black, fontSize: 35.w),
                   ),
                   Tab(
                     icon: Icon(
