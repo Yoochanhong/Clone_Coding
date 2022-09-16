@@ -1,11 +1,10 @@
+import 'package:clonecoding_dms/ontapAnnouncement.dart';
+import 'package:clonecoding_dms/signup/ontapSignup.dart';
 import 'package:clonecoding_dms/signup/signUpClass.dart';
 import 'package:flutter/material.dart';
-import 'ontapSignup.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'signUp.dart';
-import 'signUpClass.dart';
 
-Widget signupButton(String ButtonTitle, String ButtonSubTitle) {
+Widget signupButton(String ButtonTitle, String ButtonSubTitle, context,  SignUpClass instance) {
   return SizedBox(
     width: 1000.0.w,
     height: 350.0.h,
@@ -15,6 +14,14 @@ Widget signupButton(String ButtonTitle, String ButtonSubTitle) {
             (states) => Colors.transparent), //버튼 애니메이션 삭제
       ),
       onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => OnTapSignUp(
+              signUpClass: instance,
+            ),
+          ),
+        );
       },
       child: Card(
         shape: RoundedRectangleBorder(
@@ -80,9 +87,12 @@ Widget mealsButton(String title, String subTitle) {
                 ),
                 subtitle: Padding(
                   padding: EdgeInsets.fromLTRB(10.0.w, 3.0.h, 0.0.w, 40.0.h),
-                  child: Text('$subTitle',style: TextStyle(
-                    fontSize: 40.0.sp,
-                  ),),
+                  child: Text(
+                    '$subTitle',
+                    style: TextStyle(
+                      fontSize: 40.0.sp,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -97,11 +107,11 @@ Widget onTapSignButton(String title, String subText) {
   return Column(
     children: [
       TextButton(
-        onPressed: () {
-        },
+        onPressed: () {},
         style: ButtonStyle(
           overlayColor: MaterialStateColor.resolveWith(
-              (states) => Colors.transparent,), //버튼 애니메이션 삭제
+            (states) => Colors.transparent,
+          ), //버튼 애니메이션 삭제
         ),
         child: SizedBox(
           width: 750.w,
@@ -140,12 +150,16 @@ Widget onTapSignButton(String title, String subText) {
   );
 }
 
-Widget announcementButton(int w, int h, String title, String subText){
+Widget announcementButton (int w, int h, String title, String subText, context) {
   return TextButton(
-    onPressed: () {},
+    onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context){
+        return OnTapAnnouncementPage();
+      }));
+    },
     style: ButtonStyle(
       overlayColor: MaterialStateColor.resolveWith(
-            (states) => Colors.transparent,
+        (states) => Colors.transparent,
       ), //버튼 애니메이션 삭제
     ),
     child: SizedBox(
@@ -153,9 +167,9 @@ Widget announcementButton(int w, int h, String title, String subText){
       height: h.h,
       child: Card(
         shape: RoundedRectangleBorder(
-          //모서리 둥글게 깎기
+            //모서리 둥글게 깎기
             borderRadius: BorderRadius.circular(20.0)),
-        elevation: 3.0, //그림자 깊이
+        elevation: 5.0, //그림자 깊이
         shadowColor: Colors.teal[300],
         child: Center(
           child: ListTile(
@@ -170,8 +184,7 @@ Widget announcementButton(int w, int h, String title, String subText){
               ),
             ),
             subtitle: Padding(
-              padding: EdgeInsets.fromLTRB(
-                  20.0.w, 2.0.h, 0.0.w, 40.0.h),
+              padding: EdgeInsets.fromLTRB(20.0.w, 2.0.h, 0.0.w, 40.0.h),
               child: Text(
                 '$subText',
                 style: TextStyle(fontSize: 40.0.sp),
