@@ -1,4 +1,4 @@
-import 'package:clonecoding_dms/signup/button.dart';
+import 'package:clonecoding_dms/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -59,17 +59,18 @@ class Announcement extends StatelessWidget {
                         Stack(
                           clipBehavior: Clip.none,
                           children: [
-                            announcementButton(850, 240, 'ㅇ', 'ㅇ'),
+                            announcementButton(850, 240, 'ㅇ', 'ㅇ', 5.0, context),
                             Positioned(
                               bottom: 7,
                               left: -8,
-                              child: announcementButton(900, 240, 'ㅐ', 'ㅐ'),
+                              child: announcementButton(
+                                  900, 240, 'ㅐ', 'ㅐ', 5.0, context),
                             ),
                             Positioned(
                               bottom: 14,
                               left: -16,
-                              child: announcementButton(
-                                  950, 240, '공지사항', '사감부에서 게시한 공지사항을 열람합니다.'),
+                              child: announcementButton(950, 240, '공지사항',
+                                  '사감부에서 게시한 공지사항을 열람합니다.', 5.0, context),
                             ),
                           ],
                         ),
@@ -79,17 +80,18 @@ class Announcement extends StatelessWidget {
                         Stack(
                           clipBehavior: Clip.none,
                           children: [
-                            announcementButton(850, 240, 'ㅐ', 'ㅇ'),
+                            announcementButton(850, 240, 'ㅐ', 'ㅇ', 5.0, context),
                             Positioned(
                               bottom: 7,
                               left: -8,
-                              child: announcementButton(900, 240, 'ㅇ', 'ㅇ'),
+                              child: announcementButton(
+                                  900, 240, 'ㅇ', 'ㅇ', 5.0, context),
                             ),
                             Positioned(
                               bottom: 14,
                               left: -16,
-                              child: announcementButton(
-                                  950, 240, '기숙사 규정', '기숙사 규정을 열람합니다.'),
+                              child: announcementButton(950, 240, '기숙사 규정',
+                                  '기숙사 규정을 열람합니다.', 5.0, context),
                             ),
                           ],
                         ),

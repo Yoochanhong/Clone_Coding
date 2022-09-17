@@ -2,7 +2,7 @@ import 'package:clonecoding_dms/signup/signUpClass.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'button.dart';
+import '../button.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
-import 'package:clonecoding_dms/announcement.dart';
+import 'package:clonecoding_dms/announcement/announcement.dart';
 import 'package:clonecoding_dms/mealsPage.dart';
-import 'package:clonecoding_dms/myPage.dart';
+import 'package:clonecoding_dms/mypage/myPage.dart';
 import 'package:clonecoding_dms/signup/signUp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

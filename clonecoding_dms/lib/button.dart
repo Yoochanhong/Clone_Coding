@@ -153,7 +153,7 @@ Widget onTapSignButton(String title, String subText) {
   );
 }
 
-Widget announcementButton(int w, int h, String title, String subText, context) {
+Widget announcementButton(int w, int h, String title, String subText, double elevation, context) {
   return TextButton(
     onPressed: () {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -172,7 +172,7 @@ Widget announcementButton(int w, int h, String title, String subText, context) {
         shape: RoundedRectangleBorder(
             //모서리 둥글게 깎기
             borderRadius: BorderRadius.circular(20.0)),
-        elevation: 5.0, //그림자 깊이
+        elevation: elevation, //그림자 깊이
         shadowColor: Colors.teal[300],
         child: Center(
           child: ListTile(

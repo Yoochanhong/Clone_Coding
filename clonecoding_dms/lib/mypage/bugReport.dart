@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 void showPopup(context) {
   showDialog(
       context: context,
@@ -34,11 +33,13 @@ void showPopup(context) {
                           ),
                           Padding(
                             padding: EdgeInsets.only(left: 20.0.w),
-                            child: Text('버그신고',
-                            style: TextStyle(
-                              fontSize: 50.0.sp,
-                              color: Colors.teal[400],
-                            ),),
+                            child: Text(
+                              '버그신고',
+                              style: TextStyle(
+                                fontSize: 50.0.sp,
+                                color: Colors.teal[400],
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -74,18 +75,21 @@ void showPopup(context) {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text('취소',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),),
+                            child: Text(
+                              '취소',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
                           ),
                           TextButton(
-                            onPressed: () {
-                            },
-                            child: Text('전송',
-                            style: TextStyle(
-                              color: Colors.teal[400],
-                            ),),
+                            onPressed: () {},
+                            child: Text(
+                              '전송',
+                              style: TextStyle(
+                                color: Colors.teal[400],
+                              ),
+                            ),
                           ),
                         ],
                       ),

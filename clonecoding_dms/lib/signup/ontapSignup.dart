@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'button.dart';
+import '../button.dart';
 import 'signUpClass.dart';
 
 class OnTapSignUp extends StatefulWidget {
