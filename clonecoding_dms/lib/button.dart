@@ -244,3 +244,42 @@ Widget myPageButton (String title, String subText) {
     ),
   );
 }
+
+Widget myPageScoreCard (int score, String string){
+  return TextButton(
+    style: ButtonStyle(
+      overlayColor: MaterialStateColor.resolveWith(
+            (states) => Colors.transparent,
+      ), //버튼 애니메이션 삭제
+    ),
+    onPressed: () {},
+    child: Card(
+      shape: RoundedRectangleBorder(
+        //모서리 둥글게 깎기
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+
+      child: SizedBox(
+        width: 400.0.w,
+        height: 200.0.h,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '$score',
+                style: TextStyle(
+                    fontSize: 60.0.sp,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                '$string',
+                style: TextStyle(fontSize: 35.0.sp),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+}

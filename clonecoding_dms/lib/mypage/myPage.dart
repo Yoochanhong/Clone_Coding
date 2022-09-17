@@ -11,12 +11,14 @@ class MyPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.teal[400],
-        leadingWidth: 400.0, //leading 길이
+        leadingWidth: 400.0,
+        //leading 길이
         leading: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 30.0.r, left: 50.0.w, bottom: 10.0.h),
+              padding:
+                  EdgeInsets.only(top: 30.0.r, left: 50.0.w, bottom: 10.0.h),
               child: Text(
                 '유찬홍',
                 style: TextStyle(
@@ -109,112 +111,56 @@ class MyPage extends StatelessWidget {
                   width: 1080.0.w,
                   height: 1056.0.h,
                   child: Padding(
-                      padding: EdgeInsets.all(30.0.r),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding:
-                                EdgeInsets.only(top: 130.0.h, bottom: 55.0.h),
-                            child: SizedBox(
-                              width: 970.0.w,
-                              height: 90.0.h,
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                color: Colors.teal[400],
-                                child: Center(
-                                  child: Text(
-                                    '기리보이 앨범을 듣자.',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 38.0.sp,
-                                    ),
+                    padding: EdgeInsets.all(30.0.r),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding:
+                              EdgeInsets.only(top: 130.0.h, bottom: 55.0.h),
+                          child: SizedBox(
+                            width: 970.0.w,
+                            height: 90.0.h,
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              color: Colors.teal[400],
+                              child: Center(
+                                child: Text(
+                                  '기리보이 앨범을 듣자.',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 38.0.sp,
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                          Center(
-                            child: Column(
-                              children: [
-                                myPageButton('로그아웃', '기기내 계정에서 로그아웃합니다.'),
-                                myPageButton('비밀번호 변경', 'DMS 계정의 비밀번호를 변경합니다.'),
-                                myPageButton('상 / 벌점 내역', '우정관 상 / 벌점 내역을 확인합니다.'),
-                                myPageButton('개발자 소개', 'DMS팀의 개발자를 소개합니다.'),
-                              ],
-                            ),
+                        ),
+                        Center(
+                          child: Column(
+                            children: [
+                              myPageButton('로그아웃', '기기내 계정에서 로그아웃합니다.'),
+                              myPageButton('비밀번호 변경', 'DMS 계정의 비밀번호를 변경합니다.'),
+                              myPageButton(
+                                  '상 / 벌점 내역', '우정관 상 / 벌점 내역을 확인합니다.'),
+                              myPageButton('개발자 소개', 'DMS팀의 개발자를 소개합니다.'),
+                            ],
                           ),
-                        ],
-                      )),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Positioned(
                   top: -130.h,
                   left: 70.0.w,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        //모서리 둥글게 깎기
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: SizedBox(
-                        width: 400.0.w,
-                        height: 200.0.h,
-                        child: Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                '27',
-                                style: TextStyle(
-                                    fontSize: 60.0.sp,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                '상점',
-                                style: TextStyle(fontSize: 35.0.sp),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  child: myPageScoreCard(27, '상점'),
                 ),
                 Positioned(
                   top: -130.h,
                   right: 70.0.w,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        //모서리 둥글게 깎기
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: SizedBox(
-                        width: 400.0.w,
-                        height: 200.0.h,
-                        child: Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                '6',
-                                style: TextStyle(
-                                    fontSize: 60.0.sp,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                '벌점',
-                                style: TextStyle(fontSize: 35.0.sp),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  child: myPageScoreCard(6, '벌점'),
                 ),
               ],
             ),
