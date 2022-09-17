@@ -1,4 +1,5 @@
 import 'package:clonecoding_dms/button.dart';
+import 'package:clonecoding_dms/mypage/bugReport.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -88,7 +89,9 @@ class MyPage extends StatelessWidget {
                     Column(
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showPopup(context);
+                          },
                           icon: Icon(Icons.bug_report),
                           color: Colors.white,
                         ),
