@@ -2,6 +2,7 @@ import 'package:clonecoding_dms/button.dart';
 import 'package:clonecoding_dms/mypage/bugReport.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyPage extends StatelessWidget {
   const MyPage({Key? key}) : super(key: key);
@@ -75,14 +76,18 @@ class MyPage extends StatelessWidget {
                     Column(
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showToast();
+                          },
                           icon: Icon(Icons.edit),
                           color: Colors.white,
                         ),
                         Text(
                           '설문 조사',
-                          style:
-                              TextStyle(color: Colors.white, fontSize: 30.0.sp),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30.0.sp,
+                          ),
                         ),
                       ],
                     ),
@@ -97,8 +102,10 @@ class MyPage extends StatelessWidget {
                         ),
                         Text(
                           '버그 신고',
-                          style:
-                              TextStyle(color: Colors.white, fontSize: 30.0.sp),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30.0.sp,
+                          ),
                         ),
                       ],
                     ),
@@ -172,4 +179,16 @@ class MyPage extends StatelessWidget {
       ),
     );
   }
+}
+
+void showToast() {
+  Fluttertoast.showToast(
+    msg: '오픈 준비 중입니다.',
+    gravity: ToastGravity.BOTTOM,
+    //toast메세지 위치
+    fontSize: 50.0.sp,
+    backgroundColor: Colors.grey,
+    textColor: Colors.white,
+    toastLength: Toast.LENGTH_LONG //toast 메시지 시간
+  );
 }
