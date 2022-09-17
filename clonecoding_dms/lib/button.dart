@@ -1,18 +1,17 @@
-import 'package:clonecoding_dms/ontapAnnouncement.dart';
 import 'package:clonecoding_dms/signup/ontapSignup.dart';
 import 'package:clonecoding_dms/signup/signUpClass.dart';
 import 'package:flutter/material.dart';
+import 'package:clonecoding_dms/announcement/ontapAnnouncement.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:clonecoding_dms/mypage/myPage.dart';
 
-Widget signupButton(String ButtonTitle, String ButtonSubTitle, context,  SignUpClass instance) {
+
+Widget signupButton(
+    String ButtonTitle, String ButtonSubTitle, context, SignUpClass instance) {
   return SizedBox(
     width: 1000.0.w,
     height: 350.0.h,
     child: TextButton(
-      style: ButtonStyle(
-        overlayColor: MaterialStateColor.resolveWith(
-            (states) => Colors.transparent), //버튼 애니메이션 삭제
-      ),
       onPressed: () {
         Navigator.push(
           context,
@@ -23,6 +22,10 @@ Widget signupButton(String ButtonTitle, String ButtonSubTitle, context,  SignUpC
           ),
         );
       },
+      style: ButtonStyle(
+        overlayColor: MaterialStateColor.resolveWith(
+                (states) => Colors.transparent), //버튼 애니메이션 삭제
+      ),
       child: Card(
         shape: RoundedRectangleBorder(
             //모서리 둥글게 깎기
@@ -150,10 +153,10 @@ Widget onTapSignButton(String title, String subText) {
   );
 }
 
-Widget announcementButton (int w, int h, String title, String subText, context) {
+Widget announcementButton(int w, int h, String title, String subText, context) {
   return TextButton(
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context){
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
         return OnTapAnnouncementPage();
       }));
     },
@@ -192,6 +195,51 @@ Widget announcementButton (int w, int h, String title, String subText, context) 
             ),
           ),
         ),
+      ),
+    ),
+  );
+}
+
+Widget myPageButton (String title, String subText) {
+  return SizedBox(
+    width: 900.0.w,
+    height: 180.0.h,
+    child: MaterialButton(
+      onPressed: () {},
+      color: Colors.white,
+      elevation: 0,
+      child: Row(
+        mainAxisAlignment:
+        MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment:
+            CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                    top: 28.0.h, bottom: 35.0.h),
+                child: Text(
+                  '$title',
+                  style: TextStyle(
+                    color: Colors.teal[400],
+                    fontSize: 45.0.sp,
+                  ),
+                ),
+              ),
+              Text(
+                '$subText',
+                style: TextStyle(
+                  fontSize: 30.0.sp,
+                ),
+              ),
+            ],
+          ),
+          Icon(
+            Icons.keyboard_arrow_right_outlined,
+            color: Colors.grey,
+          ),
+        ],
       ),
     ),
   );
