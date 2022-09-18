@@ -44,25 +44,33 @@ void showPopup(context) {
                         ],
                       ),
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: '제목',
-                        labelText: '제목',
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(width: 2, color: Colors.teal),
+                    SizedBox(
+                      width: 800.0.w,
+                      height: 120.0.h,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: '제목',
+                          labelText: '제목',
+                          border: OutlineInputBorder(),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                            borderSide: BorderSide(width: 2, color: Colors.teal),
+                          ),
                         ),
                       ),
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: '버그',
-                        labelText: '버그',
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(width: 2, color: Colors.teal),
+                    SizedBox(
+                      width: 800.0.w,
+                      height: 120.0.h,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: '버그',
+                          labelText: '버그',
+                          border: OutlineInputBorder(),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                            borderSide: BorderSide(width: 2, color: Colors.teal),
+                          ),
                         ),
                       ),
                     ),
@@ -79,6 +87,7 @@ void showPopup(context) {
                               '취소',
                               style: TextStyle(
                                 color: Colors.black,
+                                fontSize: 40.0.sp
                               ),
                             ),
                           ),
@@ -88,6 +97,7 @@ void showPopup(context) {
                               '전송',
                               style: TextStyle(
                                 color: Colors.teal[400],
+                                fontSize: 40.0.sp
                               ),
                             ),
                           ),
