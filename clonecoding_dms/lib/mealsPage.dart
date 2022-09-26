@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:timer_builder/timer_builder.dart';
+import 'package:clonecoding_dms/getMeals.dart';
+import 'package:clonecoding_dms/meals.dart';
 
 class MealsPage extends StatefulWidget {
   const MealsPage({Key? key}) : super(key: key);
@@ -17,11 +19,13 @@ class _MealsPageState extends State<MealsPage>
 
   PageController page = PageController(initialPage: 3);
   int pageIndex = 3;
-  DateTime date = DateTime.now();
-  String getSystemTime(){
+  var now = DateTime.now();
+
+  String getSystemTime() {
     var now = DateTime.now();
     return DateFormat("yyy년 MM월 d일").format(now);
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -47,14 +51,13 @@ class _MealsPageState extends State<MealsPage>
                     children: [
                       TimerBuilder.periodic(
                         (Duration(days: 1)),
-                        builder: (context){
-                          print('${getSystemTime()}');
+                        builder: (context) {
                           return Text(
                             '${getSystemTime()}',
                           );
                         },
                       ),
-                      Text(DateFormat(' EEEE ').format(date)),
+                      Text(DateFormat(' EEEE ').format(now)),
                     ],
                   ),
                   IconButton(
