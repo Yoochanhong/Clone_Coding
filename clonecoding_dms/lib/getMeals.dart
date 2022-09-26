@@ -9,8 +9,8 @@ Future<Meals> getMeals() async {
   final response =
   await http.get(Uri.parse('https://api.dsm-dms.com/meal/$year-$month-$day'));
   if (response.statusCode == 200) {
-    print(json.decode(response.body));
-    return Meals.fromjson(json.decode(response.body));
+    print(json.decode(utf8.decode(response.bodyBytes)));
+    return Meals.fromjson(json.decode(utf8.decode(response.bodyBytes)));
   } else {
     throw Exception('실패');
   }

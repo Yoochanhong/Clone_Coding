@@ -16,6 +16,7 @@ class MealsPage extends StatefulWidget {
 class _MealsPageState extends State<MealsPage>
     with SingleTickerProviderStateMixin {
   //상태가 잆는 위젯은 상태값들을 보존하고 추적할 수 있다.
+  Future<Meals>? meals;
 
   PageController page = PageController(initialPage: 3);
   int pageIndex = 3;
@@ -24,6 +25,11 @@ class _MealsPageState extends State<MealsPage>
   String getSystemTime() {
     var now = DateTime.now();
     return DateFormat("yyy년 MM월 d일").format(now);
+  }
+  @override
+  void initState(){
+    super.initState();
+    meals = getMeals();
   }
 
   @override
