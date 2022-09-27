@@ -1,10 +1,10 @@
 import 'package:clonecoding_dms/button.dart';
+import 'package:clonecoding_dms/getMeals.dart';
+import 'package:clonecoding_dms/meals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:timer_builder/timer_builder.dart';
-import 'package:clonecoding_dms/getMeals.dart';
-import 'package:clonecoding_dms/meals.dart';
 
 class MealsPage extends StatefulWidget {
   const MealsPage({Key? key}) : super(key: key);
@@ -26,8 +26,9 @@ class _MealsPageState extends State<MealsPage>
     var now = DateTime.now();
     return DateFormat("yyy년 MM월 d일").format(now);
   }
+
   @override
-  void initState(){
+  void initState() {
     super.initState();
     meals = getMeals();
   }
@@ -89,14 +90,26 @@ class _MealsPageState extends State<MealsPage>
                     itemCount: 11, //페이지 수
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            mealsButton('아침', '급식이 없습니다.'),
-                            mealsButton('점심', '급식이 없습니다.'),
-                            mealsButton('저녁', '급식이 없습니다.'),
-                          ],
-                        ),
+                        child: FutureBuilder(
+                            future: meals,
+                            builder: (BuildContext context,
+                                AsyncSnapshot<Meals> snapshot) {
+                              if (snapshot.hasData) {
+                                return Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    mealsButton('아침', snapshot.data!.breakfast.toString()),
+                                    mealsButton('점심', snapshot.data!.lunch.toString()),
+                                    mealsButton('저녁', snapshot.data!.dinner.toString()),
+                                  ],
+                                );
+                              } else if (snapshot.hasError) {
+                                return Text('error');
+                              } else {
+                                return CircularProgressIndicator();
+                              }
+                            }),
                       );
                     }, //page 의 반목문 항목 형성
                   ),
