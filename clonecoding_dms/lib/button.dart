@@ -58,7 +58,7 @@ Widget signupButton(
   );
 }
 
-Widget mealsButton(String title, String subTitle) {
+Widget mealsButton(String title, dynamic subTitle) {
   return Column(
     children: [
       TextButton(
