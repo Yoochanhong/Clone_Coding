@@ -96,9 +96,14 @@ class _MealsPageState extends State<MealsPage>
                             return Container(
                               child: Column(
                                 children: [
-                                  mealsButton('아침', snapshot.data!.date!.breakfast.toString()),
-                                  mealsButton('점심', snapshot.data!.date!.lunch.toString()),
-                                  mealsButton('저녁', snapshot.data!.date!.dinner.toString()),
+                                  mealsButton(
+                                      '아침',
+                                      snapshot.data!.date!.breakfast
+                                          .toString()),
+                                  mealsButton('점심',
+                                      snapshot.data!.date!.lunch.toString()),
+                                  mealsButton('저녁',
+                                      snapshot.data!.date!.dinner.toString()),
                                 ],
                               ),
                             );
@@ -107,7 +112,15 @@ class _MealsPageState extends State<MealsPage>
                       } else if (snapshot.hasError) {
                         return Text('에러');
                       } else
-                        return CircularProgressIndicator();
+                        return Container(
+                          child: Column(
+                            children: [
+                              mealsButton('아침', '네트워크 상태를 확인해주세요.'),
+                              mealsButton('점심', '네트워크 상태를 확인해주세요.'),
+                              mealsButton('저녁', '네트워크 상태를 확인해주세요.'),
+                            ],
+                          ),
+                        );
                     },
                   ),
                 ),
