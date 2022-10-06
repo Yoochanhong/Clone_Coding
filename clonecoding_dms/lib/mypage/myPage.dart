@@ -119,7 +119,7 @@ class MyPage extends StatelessWidget {
                 Container(
                   color: Colors.white,
                   width: 1080.0.w,
-                  height: 1056.0.h,
+                  height: 1097.0.h,
                   child: Padding(
                     padding: EdgeInsets.all(30.0.r),
                     child: Column(
@@ -170,7 +170,7 @@ class MyPage extends StatelessWidget {
                 Positioned(
                   top: -130.h,
                   right: 70.0.w,
-                  child: myPageScoreCard(6, '벌점'),
+                  child: myPageScoreCard(8, '벌점'),
                 ),
               ],
             ),
