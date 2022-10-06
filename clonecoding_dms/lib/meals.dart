@@ -4,12 +4,12 @@ String getSystemTime() {
   var now = DateTime.now();
   return DateFormat("yyy-MM-dd").format(now);
 }
-class Test {
+class Meals{
   Date? date;
 
-  Test({this.date});
+  Meals({this.date});
 
-  Test.fromJson(Map<String, dynamic> json) {
+  Meals.fromJson(Map<String, dynamic> json) {
     date = json['${getSystemTime()}'] != null ? new Date.fromJson(json['${getSystemTime()}']) : null;
     print('${getSystemTime()}');
   }
