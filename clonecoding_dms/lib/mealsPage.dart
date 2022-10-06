@@ -24,7 +24,7 @@ class _MealsPageState extends State<MealsPage>
 
   String getSystemTime() {
     var now = DateTime.now();
-    return DateFormat("yyy년 MM월 d일").format(now);
+    return DateFormat("yyy년 MM월 dd일").format(now);
   }
 
   @override
@@ -85,33 +85,30 @@ class _MealsPageState extends State<MealsPage>
                 child: SizedBox(
                   width: 1000.0.w,
                   height: 1400.0.h,
-                  child: PageView.builder(
-                    controller: page,
-                    itemCount: 11, //페이지 수
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        child: FutureBuilder(
-                            future: meals,
-                            builder: (BuildContext context,
-                                AsyncSnapshot<Meals> snapshot) {
-                              if (snapshot.hasData) {
-                                return Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    mealsButton('아침', snapshot.data!.breakfast.toString()),
-                                    mealsButton('점심', snapshot.data!.lunch.toString()),
-                                    mealsButton('저녁', snapshot.data!.dinner.toString()),
-                                  ],
-                                );
-                              } else if (snapshot.hasError) {
-                                return Text('error');
-                              } else {
-                                return CircularProgressIndicator();
-                              }
-                            }),
-                      );
-                    }, //page 의 반목문 항목 형성
+                  child: FutureBuilder(
+                    future: meals,
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        return PageView.builder(
+                          controller: page,
+                          itemCount: 11,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              child: Column(
+                                children: [
+                                  mealsButton('아침', snapshot.data!.date!.breakfast.toString()),
+                                  mealsButton('점심', snapshot.data!.date!.lunch.toString()),
+                                  mealsButton('저녁', snapshot.data!.date!.dinner.toString()),
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      } else if (snapshot.hasError) {
+                        return Text('에러');
+                      } else
+                        return CircularProgressIndicator();
+                    },
                   ),
                 ),
               ),
