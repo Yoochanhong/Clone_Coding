@@ -17,20 +17,35 @@ class _MealsPageState extends State<MealsPage>
     with SingleTickerProviderStateMixin {
   //상태가 잆는 위젯은 상태값들을 보존하고 추적할 수 있다.
   Future<Meals>? meals;
-
   PageController page = PageController(initialPage: 3);
   int pageIndex = 3;
+  String? daysOfWeek; //요일
   var now = DateTime.now();
+  var Week = {
+    'Sun' : '일',
+    'Mon' : '월',
+    'Tue' : '화',
+    'Wed' : '수',
+    'Thu' : '목',
+    'Fri' : '금',
+    'Sat' : '토',
+  };
 
   String getSystemTime() {
-    var now = DateTime.now();
     return DateFormat("yyy년 MM월 dd일").format(now);
+  }
+
+  String getWeek(){
+    String? getDay = Week[DateFormat('E').format(now)];
+    String dateStr = DateFormat(getDay!+ '요일').format(now);
+    return dateStr;
   }
 
   @override
   void initState() {
     super.initState();
     meals = getMeals();
+    daysOfWeek = getWeek();
   }
 
   @override
@@ -46,7 +61,7 @@ class _MealsPageState extends State<MealsPage>
                   IconButton(
                     onPressed: () {
                       page.animateToPage(--pageIndex,
-                          duration: Duration(milliseconds: 400),
+                          duration: Duration(milliseconds: 300),
                           curve: Curves.linearToEaseOut);
                     },
                     icon: Icon(
@@ -64,13 +79,13 @@ class _MealsPageState extends State<MealsPage>
                           );
                         },
                       ),
-                      Text(DateFormat(' EEEE ').format(now)),
+                      Text(daysOfWeek.toString()),
                     ],
                   ),
                   IconButton(
                     onPressed: () {
                       page.animateToPage(++pageIndex,
-                          duration: Duration(milliseconds: 400),
+                          duration: Duration(milliseconds: 300),
                           curve: Curves.linearToEaseOut);
                     },
                     icon: Icon(
