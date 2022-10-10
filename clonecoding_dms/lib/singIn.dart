@@ -1,3 +1,4 @@
+import 'package:clonecoding_dms/join.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -142,7 +143,14 @@ class _SignInPageState extends State<SignInPage> {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Join(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
