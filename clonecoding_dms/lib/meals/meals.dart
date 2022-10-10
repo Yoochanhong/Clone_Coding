@@ -28,7 +28,7 @@ class Date {
   List<String>? dinner;
   List<String>? lunch;
 
-  Date({this.breakfast, this.dinner, this.lunch});
+  Date({this.breakfast, this.lunch, this.dinner});
 
   Date.fromJson(Map<String, dynamic> json) {
     breakfast = json['breakfast'].cast<String>();

@@ -1,6 +1,6 @@
 import 'package:clonecoding_dms/button.dart';
-import 'package:clonecoding_dms/getMeals.dart';
-import 'package:clonecoding_dms/meals.dart';
+import 'package:clonecoding_dms/meals/getMeals.dart';
+import 'package:clonecoding_dms/meals/meals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
@@ -20,6 +20,7 @@ class _MealsPageState extends State<MealsPage>
   PageController page = PageController(initialPage: 3);
   int pageIndex = 3;
   String? daysOfWeek; //요일
+  String noMeals = '급식이 없습니다.';
   var now = DateTime.now();
   var Week = {
     'Sun' : '일',
@@ -125,7 +126,15 @@ class _MealsPageState extends State<MealsPage>
                           },
                         );
                       } else if (snapshot.hasError) {
-                        return Text('에러');
+                        return Container(
+                          child: Column(
+                            children: [
+                              mealsButton('아침', '급식이 없습니다.'),
+                              mealsButton('점심', '급식이 없습니다.'),
+                              mealsButton('저녁', '급식이 없습니다.'),
+                            ],
+                          ),
+                        );
                       } else
                         return Container(
                           child: Column(

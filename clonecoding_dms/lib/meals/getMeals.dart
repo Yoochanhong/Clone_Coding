@@ -1,4 +1,4 @@
-import 'package:clonecoding_dms/meals.dart';
+import 'package:clonecoding_dms/meals/meals.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
