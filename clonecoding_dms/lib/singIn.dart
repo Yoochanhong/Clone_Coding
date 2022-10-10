@@ -52,13 +52,124 @@ class _SignInPageState extends State<SignInPage> {
           ),
           SizedBox(
             width: 1080.0.w,
-            height: 1380.7.h,
+            height: 1390.0.h,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(50.0.r),
                   topRight: Radius.circular(50.0.r),
+                ),
+              ),
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: 70.0.h, bottom: 40.0.h),
+                          child: Text(
+                            '아이디',
+                            style: TextStyle(
+                              fontSize: 50.0.sp,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 800.0.w,
+                          height: 120.0.h,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: '아이디를 입력해주세요',
+                              focusColor: Colors.teal[400],
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.teal),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 70.0.h, bottom: 40.0.h),
+                          child: Text(
+                            '비밀번호',
+                            style: TextStyle(
+                              fontSize: 50.0.sp,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 800.0.w,
+                          height: 120.0.h,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: '비밀번호를 입력해주세요',
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.teal,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 30.0.h),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            '아직 DMS 회원이 아니신가요?',
+                            style: TextStyle(
+                              color: Colors.grey[500],
+                            ),
+                          ),
+                          TextButton(
+                            child: Text(
+                              '회원가입',
+                              style: TextStyle(
+                                color: Colors.teal[400],
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                    ),
+                    ButtonTheme(
+                      minWidth: 1000.0.w,
+                      height: 120.0.h,
+                      shape: RoundedRectangleBorder(
+                        //버튼을 둥글게 처리
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 480.0.h),
+                        child: MaterialButton(
+                          onPressed: () {},
+                          child: Text(
+                            '로그인',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          color: Colors.teal[300],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
