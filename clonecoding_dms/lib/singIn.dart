@@ -1,4 +1,5 @@
 import 'package:clonecoding_dms/join.dart';
+import 'package:clonecoding_dms/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,7 +31,7 @@ class _SignInPageState extends State<SignInPage> {
                     height: 150.0.h,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 50.0.h, bottom: 20.0.h),
+                    padding: EdgeInsets.only(top: 50.0.h, bottom: 10.0.h),
                     child: Text(
                       'DMS for Flutter',
                       style: TextStyle(
@@ -165,7 +166,14 @@ class _SignInPageState extends State<SignInPage> {
                       child: Padding(
                         padding: EdgeInsets.only(top: 480.0.h),
                         child: MaterialButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MainWidget(),
+                              ),
+                            );
+                          },
                           child: Text(
                             '로그인',
                             style: TextStyle(
