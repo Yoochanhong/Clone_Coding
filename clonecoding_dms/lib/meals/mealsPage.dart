@@ -119,7 +119,7 @@ class _MealsPageState extends State<MealsPage>
                                   mealsButton('점심',
                                       snapshot.data!.date!.lunch.toString()),
                                   mealsButton('저녁',
-                                      snapshot.data!.date!.dinner.toString()),
+                                      snapshot.data!.date!.dinner.toString() ?? '급식이 없습니다.'),
                                 ],
                               ),
                             );
