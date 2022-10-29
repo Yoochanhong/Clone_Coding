@@ -1,3 +1,4 @@
+import 'package:clonecoding_dms/singIn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,7 +20,7 @@ class _JoinState extends State<Join> {
           Container(
             child: Padding(
               padding:
-              EdgeInsets.only(top: 140.0.h, left: 140.0.w, bottom: 90.0.h),
+                  EdgeInsets.only(top: 140.0.h, left: 140.0.w, bottom: 90.0.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,7 +53,7 @@ class _JoinState extends State<Join> {
           ),
           SizedBox(
             width: 1080.0.w,
-            height: 1390.0.h,
+            height: 1380.0.h,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -183,9 +184,16 @@ class _JoinState extends State<Join> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.only(top: 220.0.h),
+                        padding: EdgeInsets.only(top: 150.0.h),
                         child: MaterialButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SignInPage(),
+                              ),
+                            );
+                          },
                           child: Text(
                             '회원가입',
                             style: TextStyle(
