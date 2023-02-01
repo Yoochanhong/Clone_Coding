@@ -82,6 +82,30 @@ class MyHomePage extends StatelessWidget {
               child: Image.asset('assets/googleLogo.png'),
             ),
             TextField(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialButton(
+                  color: Color(0xff313235),
+                  onPressed: () {},
+                  child: Text(
+                    'Google 검색',
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                  ),
+                ),
+                SizedBox(width: 15),
+                MaterialButton(
+                  color: Color(0xff313235),
+                  onPressed: () {},
+                  child: Text(
+                    'Google 검색',
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
