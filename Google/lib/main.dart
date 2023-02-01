@@ -86,6 +86,7 @@ class MyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MaterialButton(
+                  elevation: 0,
                   color: Color(0xff313235),
                   onPressed: () {},
                   child: Text(
@@ -96,6 +97,7 @@ class MyHomePage extends StatelessWidget {
                 ),
                 SizedBox(width: 15),
                 MaterialButton(
+                  elevation: 0,
                   color: Color(0xff313235),
                   onPressed: () {},
                   child: Text(
