@@ -65,8 +65,24 @@ class MyHomePage extends StatelessWidget {
           IconButton(
               onPressed: () {}, icon: Icon(Icons.apps), color: Colors.white),
           SizedBox(width: 8.0),
-          ElevatedButton(onPressed: () {}, child: Text('로그인')),
+          MaterialButton(
+            color: Color(0xFF87AEEE),
+            onPressed: () {},
+            child: Text('로그인'),
+          ),
         ],
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 272,
+              height: 92,
+              child: Image.asset('assets/googleLogo.png'),
+            ),
+          ],
+        ),
       ),
     );
   }
