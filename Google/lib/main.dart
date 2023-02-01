@@ -59,8 +59,12 @@ class MyHomePage extends StatelessWidget {
         ),
         actions: [
           TextButton(onPressed: () {}, child: Text('Gmail')),
+          SizedBox(width: 8.0),
           TextButton(onPressed: () {}, child: Text('이미지')),
-          IconButton(onPressed: () {}, icon: Icon(Icons.apps)),
+          SizedBox(width: 8.0),
+          IconButton(
+              onPressed: () {}, icon: Icon(Icons.apps), color: Colors.white),
+          SizedBox(width: 8.0),
           ElevatedButton(onPressed: () {}, child: Text('로그인')),
         ],
       ),
