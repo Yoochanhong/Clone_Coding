@@ -23,8 +23,22 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leadingWidth: 100,
-        leading: TextButton(onPressed: () {}, child: Text('Google 정보')),
+        leadingWidth: 300,
+        leading: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            children: [
+              TextButton(onPressed: () {}, child: Text('Google 정보')),
+              TextButton(onPressed: () {}, child: Text('스토어')),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: () {}, child: Text('Gmail')),
+          TextButton(onPressed: () {}, child: Text('이미지')),
+          IconButton(onPressed: () {}, icon: Icon(Icons.apps)),
+          ElevatedButton(onPressed: () {}, child: Text('로그인')),
+        ],
       ),
     );
   }
