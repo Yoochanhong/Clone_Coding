@@ -8,6 +8,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.white,
+        primarySwatch: const MaterialColor(0xFFFFFFFF, {
+          50: Color(0xFFFFFFFF),
+          100: Color(0xFFFFFFFF),
+          200: Color(0xFFFFFFFF),
+          300: Color(0xFFFFFFFF),
+          400: Color(0xFFFFFFFF),
+          500: Color(0xFFFFFFFF),
+          600: Color(0xFFFFFFFF),
+          700: Color(0xFFFFFFFF),
+          800: Color(0xFFFFFFFF),
+          900: Color(0xFFFFFFFF),
+        }),
+      ),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
@@ -29,7 +44,15 @@ class MyHomePage extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Row(
             children: [
-              TextButton(onPressed: () {}, child: Text('Google 정보')),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Google 정보',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
               TextButton(onPressed: () {}, child: Text('스토어')),
             ],
           ),
