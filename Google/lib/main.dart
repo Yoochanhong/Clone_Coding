@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         }),
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -35,7 +35,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff202325),
+      backgroundColor: const Color(0xff202325),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -53,22 +53,22 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              TextButton(onPressed: () {}, child: Text('스토어')),
+              TextButton(onPressed: () {}, child: const Text('스토어')),
             ],
           ),
         ),
         actions: [
-          TextButton(onPressed: () {}, child: Text('Gmail')),
-          SizedBox(width: 8.0),
-          TextButton(onPressed: () {}, child: Text('이미지')),
-          SizedBox(width: 8.0),
+          TextButton(onPressed: () {}, child: const Text('Gmail')),
+          const SizedBox(width: 8.0),
+          TextButton(onPressed: () {}, child: const Text('이미지')),
+          const SizedBox(width: 8.0),
           IconButton(
-              onPressed: () {}, icon: Icon(Icons.apps), color: Colors.white),
-          SizedBox(width: 8.0),
+              onPressed: () {}, icon: const Icon(Icons.apps), color: Colors.white),
+          const SizedBox(width: 8.0),
           MaterialButton(
-            color: Color(0xFF87AEEE),
+            color: const Color(0xFF87AEEE),
             onPressed: () {},
-            child: Text('로그인'),
+            child: const Text('로그인'),
           ),
         ],
       ),
@@ -81,13 +81,13 @@ class MyHomePage extends StatelessWidget {
               height: 92,
               child: Image.asset('assets/googleLogo.png'),
             ),
-            TextField(),
+            const TextField(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MaterialButton(
                   elevation: 0,
-                  color: Color(0xff313235),
+                  color: const Color(0xff313235),
                   onPressed: () {},
                   child: Text(
                     'Google 검색',
@@ -95,13 +95,13 @@ class MyHomePage extends StatelessWidget {
                         TextStyle(color: Theme.of(context).colorScheme.primary),
                   ),
                 ),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 MaterialButton(
                   elevation: 0,
-                  color: Color(0xff313235),
+                  color: const Color(0xff313235),
                   onPressed: () {},
                   child: Text(
-                    'Google 검색',
+                    'I\'m Feeling Lucky',
                     style:
                         TextStyle(color: Theme.of(context).colorScheme.primary),
                   ),
