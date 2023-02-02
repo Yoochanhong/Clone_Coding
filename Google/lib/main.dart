@@ -63,7 +63,9 @@ class MyHomePage extends StatelessWidget {
           TextButton(onPressed: () {}, child: const Text('이미지')),
           const SizedBox(width: 8.0),
           IconButton(
-              onPressed: () {}, icon: const Icon(Icons.apps), color: Colors.white),
+              onPressed: () {},
+              icon: const Icon(Icons.apps),
+              color: Colors.white),
           const SizedBox(width: 8.0),
           MaterialButton(
             color: const Color(0xFF87AEEE),
@@ -85,14 +87,20 @@ class MyHomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MaterialButton(
-                  elevation: 0,
-                  color: const Color(0xff313235),
-                  onPressed: () {},
-                  child: Text(
-                    'Google 검색',
-                    style:
-                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                SizedBox(
+                  width: 100,
+                  height: 30,
+                  child: MaterialButton(
+                    elevation: 0,
+                    color: const Color(0xff313235),
+                    onPressed: () {},
+                    child: Text(
+                      'Google 검색',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontSize: 13,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 15),
@@ -102,8 +110,10 @@ class MyHomePage extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'I\'m Feeling Lucky',
-                    style:
-                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                      fontSize: 13,
+                    ),
                   ),
                 ),
               ],
