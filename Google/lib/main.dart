@@ -94,7 +94,7 @@ class MyHomePage extends StatelessWidget {
               margin: EdgeInsets.only(left: 380, right: 380),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: Colors.grey,
+                border: Border.all(color: Colors.white24),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
