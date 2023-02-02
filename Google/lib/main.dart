@@ -91,7 +91,7 @@ class MyHomePage extends StatelessWidget {
             ),
             SizedBox(height: 40),
             Container(
-              margin: EdgeInsets.only(left: 380, right: 380),
+              width: MediaQuery.of(context).size.width * 0.48,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.white24),
