@@ -91,11 +91,17 @@ class MyHomePage extends StatelessWidget {
             ),
             SizedBox(height: 40),
             Container(
+              margin: EdgeInsets.only(left: 380, right: 380),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.grey,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.search,
                       color: Theme.of(context).colorScheme.primary),
+                  SizedBox(width: 15),
                   SizedBox(width: 500, child: TextField()),
                   IconButton(
                       onPressed: () {},
