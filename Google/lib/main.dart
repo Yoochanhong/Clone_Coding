@@ -67,10 +67,16 @@ class MyHomePage extends StatelessWidget {
               icon: const Icon(Icons.apps),
               color: Colors.white),
           const SizedBox(width: 8.0),
-          MaterialButton(
-            color: const Color(0xFF87AEEE),
-            onPressed: () {},
-            child: const Text('로그인'),
+          SizedBox(
+            width: 90,
+            child: MaterialButton(
+              color: const Color(0xFF87AEEE),
+              onPressed: () {},
+              child: const Text(
+                '로그인',
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
         ],
       ),
@@ -83,7 +89,28 @@ class MyHomePage extends StatelessWidget {
               height: 92,
               child: Image.asset('assets/googleLogo.png'),
             ),
-            const TextField(),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.search,
+                      color: Theme.of(context).colorScheme.primary),
+                  SizedBox(width: 500, child: TextField()),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.keyboard_alt_outlined,
+                          color: Theme.of(context).colorScheme.primary)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.mic,
+                          color: Theme.of(context).colorScheme.primary)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.camera_alt,
+                          color: Theme.of(context).colorScheme.primary)),
+                ],
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
