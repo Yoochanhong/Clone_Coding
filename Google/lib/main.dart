@@ -89,7 +89,7 @@ class MyHomePage extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 100,
-                  height: 30,
+                  height: 35,
                   child: MaterialButton(
                     elevation: 0,
                     color: const Color(0xff313235),
@@ -104,15 +104,19 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 15),
-                MaterialButton(
-                  elevation: 0,
-                  color: const Color(0xff313235),
-                  onPressed: () {},
-                  child: Text(
-                    'I\'m Feeling Lucky',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
-                      fontSize: 13,
+                SizedBox(
+                  width: 130,
+                  height: 35,
+                  child: MaterialButton(
+                    elevation: 0,
+                    color: const Color(0xff313235),
+                    onPressed: () {},
+                    child: Text(
+                      'I\'m Feeling Lucky',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontSize: 13,
+                      ),
                     ),
                   ),
                 ),
