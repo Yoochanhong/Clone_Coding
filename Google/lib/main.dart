@@ -89,6 +89,7 @@ class MyHomePage extends StatelessWidget {
               height: 92,
               child: Image.asset('assets/googleLogo.png'),
             ),
+            SizedBox(height: 40),
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -111,6 +112,7 @@ class MyHomePage extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
