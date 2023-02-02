@@ -89,7 +89,7 @@ class MyHomePage extends StatelessWidget {
               height: 92,
               child: Image.asset('assets/googleLogo.png'),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Container(
               width: MediaQuery.of(context).size.width * 0.48,
               decoration: BoxDecoration(
@@ -101,8 +101,8 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   Icon(Icons.search,
                       color: Theme.of(context).colorScheme.primary),
-                  SizedBox(width: 15),
-                  SizedBox(width: 500, child: TextField()),
+                  const SizedBox(width: 15),
+                  const SizedBox(width: 500, child: TextField()),
                   IconButton(
                       onPressed: () {},
                       icon: Icon(Icons.keyboard_alt_outlined,
@@ -118,7 +118,7 @@ class MyHomePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
